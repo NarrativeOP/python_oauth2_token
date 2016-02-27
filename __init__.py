@@ -57,7 +57,7 @@ def get_token(client_id, client_secret, callback, host=HOST, port=PORT):
     thread.start()
 
     url = "https://narrativeapp.com/oauth2/authorize/?response_type=code&client_id={client_id}&redirect_uri={redirect_uri}".format(
-            client_id=CLIENT_ID, redirect_uri=redirect_uri)
+            client_id=client_id, redirect_uri=redirect_uri)
 
     if sys.platform == 'darwin':  # OS X
         subprocess.Popen(['open', url])
